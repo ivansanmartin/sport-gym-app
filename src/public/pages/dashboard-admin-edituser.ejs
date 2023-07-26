@@ -1,0 +1,42 @@
+<% content=` 
+
+    <div id="content">
+        <section class="bg-oceanBlue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h1 class="text-light fw-bold mb-0">Editar ${typeRol}</h1>
+                        <p class="lead text-ligth fw-bold fw-lighter">Busca y edita tus ${typeRol}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text mt-3" id="addon-wrapping"><ion-icon name="search"></ion-icon></span>
+                    <input type="text" class="form-control mt-3" placeholder="Buscar..." aria-label="Nombre de usuario"
+                        aria-describedby="addon-wrapping" id="search">
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Rut</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    ` %>
+
+    <script src="/js/dashboard-admin-colabs.js"></script>
+    
+<%- include('partials/template'); %>

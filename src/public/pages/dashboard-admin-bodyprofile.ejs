@@ -1,0 +1,63 @@
+<% content = `
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-dark bg-light fw-bold mb-0 p-3">Ficha de Composición Corporal</h1>
+            </div>
+        </div>
+        <div class="container">
+            <form class="row formPlus g-sm-4 text-black fw-bold p-4" method="post">
+                <div class="col-md-6">
+                    <label for="inputPeso" class="form-label">Peso (kg)</label>
+                    <input type="text" class="form-control" id="inputPeso" name="peso" required>
+                    </div>
+                <div class="col-md-6">
+                    <label for="inputEstatura" class="form-label">Estatura (cm)</label>
+                    <input type="text" class="form-control" id="inputEstatura" name="estatura" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputOsea" class="form-label">Masa osea (kg)</label>
+                    <input type="text" class="form-control" id="inputOsea" name="masa_osea" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputSexo" class="form-label">Sexo</label>
+                    <select class="form-select" name="sexo" id="selectSexo" required>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputIMC" class="form-label">IMC</label>
+                    <input type="text" class="form-control" id="inputIMC" name="IMC" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCintura" class="form-label">Circunferencia cintura (cm)</label>
+                    <input type="text" class="form-control" id="inputCintura" name="circunf_cintura" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCadera" class="form-label">Circunferencia cadera (cm)</label>
+                    <input type="text" class="form-control" id="inputCadera" name="circunf_cadera" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputGrasa" class="form-label">Masa grasa (%)</label>
+                    <input type="text" class="form-control" id="inputGrasa" name="masa_grasa" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputMuscular" class="form-label">Masa muscular (%)</label>
+                    <input type="text" class="form-control" id="inputMuscular" name="masa_muscular" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEdad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" id="inputEdad" name="edad" required>
+                </div>
+                    <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary w-30 mt-5 border-5">Guardar</button>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+`%>
+
+<%- include('partials/template'); %>

@@ -1,0 +1,32 @@
+<% content = `
+    <section>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-dark bg-light fw-bold mb-0 p-3">Cambiar Correo</h1>
+            </div>
+        </div>
+        <div class="container">
+            <form class="row formPlus g-sm-4 text-black fw-bold p-4" method="post" id="formContact" autocomplete="off">
+                <div class="col-md-12">
+                <label for="inputMail" class="form-label">Proporcione un nuevo correo electrónico para recibir notificaciones de cuenta y confirmaciones de recuperación de contraseña: </label>
+                <input type="email" class="form-control" id="inputMail" name="newEmail" autocomplete="off">
+                </div>
+                <div class="col-md-12">
+                <label for="InputRepeatMail" class="form-label">Confirme correo electrónico para recibir notificaciones de cuenta y confirmaciones de recuperación de contraseña: </label>
+                <input type="email" class="form-control" id="InputRepeatMail" name="repeatNewEmail" autocomplete="off">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputPassword" class="form-label">Ingrese su contraseña para realizar cambios: </label>
+                    <input type="password"  class="form-control" id="inputPassword" name="currentPassword" autocomplete="off" autocomplete="new-password" autocomplete="false">
+                </div>
+                <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary w-30 mt-5 border-5" id="buttonSubmit">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="/js/dashboard-profile-contact.js"></script>
+
+`%>
+<%- include('partials/template'); %>

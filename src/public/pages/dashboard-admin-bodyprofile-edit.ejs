@@ -1,0 +1,63 @@
+<% content=` 
+    <section>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-dark bg-light fw-bold mb-0 p-3">Editar Ficha de Composición Corporal</h1>
+            </div>
+        </div>
+        <div class="container">
+            <form class="row formPlus g-sm-4 text-black fw-bold p-4">
+                <div class="col-md-6">
+                <label for="inputPeso" class="form-label">Peso</label>
+                <input type="text" class="form-control" id="inputPeso" value="${peso}">
+                </div>
+                <div class="col-md-6">
+                <label for="inputEstatura" class="form-label">Estatura</label>
+                <input type="text" class="form-control" id="inputEstatura" value="${estatura}">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputOsea" class="form-label">Masa osea</label>
+                    <input type="text" class="form-control" id="inputOsea" value="${masa_osea}">
+                </div>
+                <div class="col-md-6">
+                <label for="inputSexo" class="form-label">Sexo</label>
+                <input type="text" class="form-control" id="inputSexo" value="${sexo}">
+                </div>
+                <div class="col-md-6">
+                <label for="inputIMC" class="form-label">IMC</label>
+                <input type="text" class="form-control" id="inputIMC" value="${imc}">
+                </div>
+                <div class="col-md-6">
+                <label for="inputCintura" class="form-label">Circunferencia cintura</label>
+                <input type="text" class="form-control" id="inputCintura" value="${circunf_cintura}">
+                </div>
+                <div class="col-md-6">
+                <label for="inputCadera" class="form-label">Circunferencia cadera</label>
+                <input type="text" class="form-control" id="inputCadera" value="${circunf_cadera}">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputGrasa" class="form-label">Masa grasa</label>
+                    <input type="text" class="form-control" id="inputGrasa" value="${masa_grasa}">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputMuscular" class="form-label">Masa muscular</label>
+                    <input type="text" class="form-control" id="inputMuscular" value="${masa_muscular}">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEdad" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="inputEdad" value="${edad}">
+                </div>
+                <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary w-25 border-5">Guardar</button>
+                <button type="button" class="btn btn-danger w-25 border-5 ms-5" id="remove-ficha">Eliminar Ficha</button>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+
+    <script src="/js/dashboard-admin-colabs.js"></script>
+
+    ` %>
+
+<%- include('partials/template'); %>

@@ -1,0 +1,8 @@
+.vscode
+/src/.env
+/node-modules
+Dockerfile
+fly.toml
+
+
+

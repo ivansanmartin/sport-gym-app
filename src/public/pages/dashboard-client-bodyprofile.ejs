@@ -1,0 +1,37 @@
+<% content = ""; %>
+
+
+
+<% if (clientFicha.notFoundFicha) { %>
+    <% content += `
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            Datos de composición corporal
+            </a>
+                <a href="#" class="list-group-item list-group-item-action">No se encontraron datos.</a>
+        </div>
+
+    ` %>
+<% } else { %>
+    <% content += `
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            Datos de composición corporal
+            </a>
+                <a href="#" class="list-group-item list-group-item-action">Peso: ${clientFicha.peso}</a>
+                <a href="#" class="list-group-item list-group-item-action">Estatura: ${clientFicha.estatura}</a>
+                <a href="#" class="list-group-item list-group-item-action">Masa osea: ${clientFicha.masa_osea}</a>
+                <a href="#" class="list-group-item list-group-item-action">Sexo: ${clientFicha.sexo}</a>
+                <a href="#" class="list-group-item list-group-item-action">IMC: ${clientFicha.imc}</a>
+                <a href="#" class="list-group-item list-group-item-action">Circunferencia cintura: ${clientFicha.circunferencia_cintura}</a>
+                <a href="#" class="list-group-item list-group-item-action">Circunferencia cadera: ${clientFicha.circunferencia_cadera}</a>
+                <a href="#" class="list-group-item list-group-item-action">Masa grasa: ${clientFicha.masa_grasa}</a>
+                <a href="#" class="list-group-item list-group-item-action">Masa muscular: ${clientFicha.masa_muscular}</a>
+                <a href="#" class="list-group-item list-group-item-action">Edad: ${clientFicha.edad}</a>
+        </div>
+    ` %>
+  
+<%}%>
+
+
+<%- include('partials/template'); %>

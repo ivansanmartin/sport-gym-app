@@ -1,0 +1,121 @@
+<% navContent =  ""; %>
+<% isAdmin = "";%>
+
+    
+<% if (rol == 0 && admin == 0) { %>
+    <% navContent += `
+        <div class="menu mt-5">
+            <a href="${finalURL}/dashboard" class="d-block am text-light p-4 lead text-decoration-none"><ion-icon name="home-outline" class="me-2"></ion-icon>Menu Principal</a>
+            <span id="routines" class="d-block am  text-light p-4 lead text-decoration-none"><ion-icon name="barbell-outline" class="me-2" ></ion-icon>Rutinas</span>
+            <div class="">
+                <ul id="listRoutines" class="list__colabs">
+                    <li class="d-block"><a href="${finalURL}/dashboard/routine" class="text-light text-decoration-none">Ver rutina</li></a>
+                </ul>
+            </div>
+            <a href="${finalURL}/dashboard/body-profile" class="d-block am text-light p-4 lead text-decoration-none"><ion-icon name="body-outline" class="me-2"></ion-icon>Mi ficha</a>
+        </div>
+    ` %>
+
+    <% rolName = "Cliente"; %>
+
+<% } else if (rol == 1 && admin == 0) { %>
+    <% navContent += `
+    <div class="menu mt-5">
+        <a href="${finalURL}/dashboard" class="d-block am text-light p-4 lead text-decoration-none"><ion-icon name="home-outline" class="me-2"></ion-icon>Menu Principal</a>
+        <a href="${finalURL}/dashboard/add-users" class="d-block am text-light p-4 lead text-decoration-none"><ion-icon name="person-add-outline" class="me-2"></ion-icon>Ingresar Usuario</a>
+        <span id="users" class="d-block am  text-light p-4 lead text-decoration-none"><ion-icon name="person-outline" class="me-2"></ion-icon>Clientes</span>
+        <div class="">
+            <ul id="listUsers" class="list__colabs">
+                <li class="d-block"><a href="${finalURL}/dashboard/clients" class="text-light text-decoration-none">Ver  cliente</li></a>
+            </ul>
+        </div>
+    </div>
+    ` %>
+    <% rolName = "Colaborador"; %>
+<% } else if (admin == 1) { %>
+    <% isAdmin = `<h1 class="text-danger">Admin Dashboard</h1>`;%>
+    <% navContent += `
+        <div class="menu mt-5">
+            <a href="${finalURL}/dashboard" class="d-block am text-light p-4 lead text-decoration-none"><ion-icon name="home-outline" class="me-2"></ion-icon>Menu Principal</a>
+            <a href="${finalURL}/dashboard/add-users" class="d-block am text-light p-4 lead text-decoration-none"><ion-icon name="person-add-outline" class="me-2"></ion-icon>Ingresar Usuario</a>
+            <span id="colabs" class="cursor d-block am text-light p-4 lead text-decoration-none"><ion-icon name="people-outline" class="me-2"></ion-icon>Colaboradores</span>
+            <div class="">
+                <ul id="listColabs" class="list__colabs">
+                    <li class="d-block"><a href="${finalURL}/dashboard/colaborators" class="text-light text-decoration-none">Ver colaboradores</li></a>
+                </ul>
+            </div>
+            <span id="users" class="d-block am  text-light p-4 lead text-decoration-none"><ion-icon name="person-outline" class="me-2"></ion-icon>Clientes</span>
+            <div class="">
+                <ul id="listUsers" class="list__colabs">
+                    <li class="d-block"><a href="${finalURL}/dashboard/clients" class="text-light text-decoration-none">Ver  cliente</li></a>
+                </ul>
+            </div>
+        </div>
+        
+    ` %>
+    <% rolName = "Administrador"; %>
+
+<% } else { %>
+    <% navContent += `
+        <div class="menu mt-5">
+        </div>
+    ` %>
+    <% rolName = "Desconocido"; %>
+
+<% } %>
+    
+
+
+
+
+<% content = `
+   <div>
+    <h1>¡Bienvenido ${username}!</h1>
+   </div>
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/fondo.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>¡Sé más fuerte de lo que crees!</h5>
+          <p>En este gimnasio, desafiamos tus límites y te mostramos que eres capaz de lograr más de lo que imaginas. ¡No te rindas, mantén el enfoque y alcanza tus metas!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/fondo-servicios.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Tu cuerpo, tu templo, tu transformación</h5>
+          <p>En cada sesión de entrenamiento, estás construyendo más que músculos. Estás forjando una versión mejorada de ti mismo. A medida que te superas, te vuelves más fuerte, tanto física como mentalmente. ¡Crea el cambio que deseas ver!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/fondo-galeria.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>No hay atajos hacia el éxito</h5>
+          <p>En este gimnasio, creemos en el trabajo duro y la perseverancia. Cada gota de sudor, cada repetición, te acerca más a tus objetivos. Recuerda, el camino hacia el éxito no es fácil, pero cada paso cuenta. ¡Continúa adelante y no te detengas!</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+` %>
+
+<%- include('partials/template'); %>
+
+
+
+
+
