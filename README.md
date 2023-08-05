@@ -1,5 +1,14 @@
 # Gym App
 
+# Despliegue en Fly.
+
+Visitar: https://sport-gym.fly.dev/login
+
+Credenciales:
+
+- username: cliente
+- password: cliente
+
 # 📚 Used technologies
 
 <pre>
