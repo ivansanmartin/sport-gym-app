@@ -117,6 +117,7 @@ Credenciales:
 - nachoavi (<a href="https://github.com/nachoavi">View GitHub profile</a>)
 - Emerson-tapia-peralta (<a href="https://github.com/Emerson-tapia-peralta">View GitHub profile</a>)
 - thom1028 (<a href="https://github.com/thom1028">View Github profile</a>)
+- ivansanmartin (<a href="https://github.com/ivansanmartin">View Github profile</a>)
 
 # 🤝 Backend Collaborators
 
